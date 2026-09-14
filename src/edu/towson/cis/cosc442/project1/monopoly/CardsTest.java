@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class CardsTest extends TestCase {
     Card ccCard, chanceCard;
-    
+
     GameMaster gameMaster;
 
     protected void setUp() {
@@ -17,7 +17,7 @@ public class CardsTest extends TestCase {
         chanceCard = new MoneyCard("Lose 50 dollars", -50, Card.TYPE_CHANCE);
         gameMaster.getGameBoard().addCard(ccCard);
     }
-    
+
     public void testCardType() {
         gameMaster.drawCCCard();
         assertEquals(Card.TYPE_CC, ccCard.getCardType());
